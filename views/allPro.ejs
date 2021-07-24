@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ShopNowBD </title>
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<style type="text/css">
+
+.collpro{
+    width:300px;
+  height: 100px;
+padding-bottom: 30%;
+float: left;
+margin: 1.66%;
+
+}
+
+
+  nav{
+    background-color: orange;
+    font-family: Potta One;
+  }
+
+
+  .nav-item{
+    border:none;
+    padding: 2px;
+    margin-left: 10px;
+  }
+
+.product{
+
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.products{
+  width: 150px;
+  height: 200px;
+padding-bottom: 30%;
+float: left;
+margin: 1.66%;
+
+}
+.ShopNow{
+  margin-top: 5%;
+  
+}
+
+</style>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#"><i class="fas fa-campground"></i>ShopNowBD</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="/ShopNowBD">Save More On App <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/sellOn">Sell On ShopNowBD <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/login"><strong><i class="far fa-user"></i> Log In</strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/register"><strong><i class="fas fa-sign-in-alt"></i> Register </strong> </a>
+      </li>
+    
+        <li class="nav-item">
+        <a class="nav-link" href="/logout"><strong><i class="fas fa-ghost"></i> Log Out </strong></a>
+      </li>
+    <a class="navbar-brand" href="#"><i class="fas fa-campground"></i>ShopNowBD</a>
+     </ul>
+  </div>
+</nav>
+<body>
+
+     <% products.forEach(function(campground){ %>
+  
+<div class="ShopNow">
+
+  <div class="product">
+    <div class="products">
+
+      <img style="width: 100%;" src="<%= campground.image %>">
+      <p style=" font-size: 20px; text-align: center;"><%= campground.name %></p>
+
+    </div>
+
+  </div>
+
+</div>     
+       <% }) %>
+ 
+
+</body>
+</html>
